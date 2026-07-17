@@ -67,7 +67,7 @@ class AnalyticsChart extends Component
 
         // Top links
         $this->topLinks = Link::where("user_id", $userId)
-            ->withSum("clicks as total_clicks", "count")
+            ->withSum("clickStats as total_clicks", "count")
             ->orderByDesc("total_clicks")
             ->limit(5)
             ->get()
